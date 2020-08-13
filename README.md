@@ -7,7 +7,9 @@
 * Formatting elapsed time, more time is taken by the step - the step is more visible on the console.
 * Formatting throughput, more elements per second is processed - the step is more visible on the console.
 
-![GCP Dataflow Console Screenshot](gcp-dataflow-tampermonkey.png) 
+![GCP Dataflow Console Screenshot](gcp-dataflow-tampermonkey.png)
+
+[Full size version](gcp-dataflow-tampermonkey-large.png) 
 
 ## Installation
 
