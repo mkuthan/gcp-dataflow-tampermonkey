@@ -17,6 +17,10 @@ Follow the [Tampermonkey documentation](https://www.tampermonkey.net/faq.php?ext
 
 ## Changelog
 
+### 1.0.1
+
+* Update for the new version of Dataflow console.
+
 ### 1.0
 
 * Update for the new version of Dataflow console.

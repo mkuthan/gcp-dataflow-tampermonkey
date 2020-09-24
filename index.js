@@ -2,7 +2,7 @@
 // @name         GCP Dataflow - job bottlenecks view
 // @description  GCP Dataflow UI extension for finding job bottlenecks
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.0.1
 // @author       Tomasz Nurkiewicz, Marcin Kuthan
 // @match        https://console.cloud.google.com/dataflow/jobs/*/*
 // @grant        none
@@ -65,7 +65,7 @@
 
     function colorDurations() {
 	    const steps = Array
-	        .from(document.getElementsByClassName('df-step-msecs ng-star-inserted'))
+	        .from(document.getElementsByClassName('df-step-process-time ng-star-inserted'))
 	        .map(label => ({label, duration: parseDuration(label.innerText)}))
 	    const max = Math.log(Math.max.apply(Math, steps.map(x => x.duration)))
 	    steps.forEach(e => {
@@ -82,7 +82,7 @@
 
     function colorThroughput() {
 	    const steps = Array
-	        .from(document.getElementsByClassName('df-step-metrics'))
+	        .from(document.getElementsByClassName('df-step-status-text'))
 	        .map(label => ({label, throughput: parseThroughput(label.innerText)}))
 	    const max = Math.log(Math.max.apply(Math, steps.map(x => x.throughput)))
         if(max > 0) {
